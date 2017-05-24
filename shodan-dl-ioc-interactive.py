@@ -18,7 +18,7 @@ def start_downloader(*varargs):
     #Used for conversion to CSV later on#Used for conversion to CSV later on
     suffix=".json.gz"
     #The actual command used, with all the options
-    subprocess.call(['shodan', 'download', '--limit', dl_proceed_limit, dl_proceed_filename, 'category:', dl_proceed_category])
+    subprocess.call(['shodan', 'download', '--limit', dl_proceed_limit, dl_proceed_filename, 'category:' + dl_proceed_category])
     print("Do you want to convert the results into a CSV file?\n (Press y for YES, n for NO: ")
     #Converting the JSON file into CSV
     dl_convert=raw_input('')
