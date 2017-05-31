@@ -5,8 +5,8 @@
 # This script converts the Shodan report into a new CSV with one column that has the indicators only.
 # Useful for ingesting the IOCs into other platforms such as ThreatConnect
 import csv
-File1='malware-report.csv'
-File2='tc_malware.csv'
+File1=raw_input('Enter absolute path:')
+File2=raw_input('Enter new fileName with path:')
 outdata=[]
 input_file=open(File1,'rb')
 output_file=open(File2, 'wb')
